@@ -1,0 +1,22 @@
+{
+  "name": "domain-driven-design",
+  "version": "1.0.0",
+  "author": "Luis Sena <sena.luisgf@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "main": "./dist/test.js",
+  "scripts": {
+    "test": "tsc && jest",
+    "tsc": "tsc --noEmit",
+    "start": "node dist/test.js",
+    "build": "tsc"
+  },
+  "keywords": [
+    "DDD",
+    "Domain-Driven-Design"
+  ],
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^5.6.2"
+  }
+}
