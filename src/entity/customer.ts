@@ -35,8 +35,10 @@ export default class Customer {
   deactivate() {
     this._active = false;
   }
-
-  set Address(address: Address) {
+  isActive(): boolean {
+    return this._active;
+  }
+  set address(address: Address) {
     this._address = address;
   }
 
@@ -46,4 +48,5 @@ export default class Customer {
   get id(): string {
     return this._id
   }
+
 }
