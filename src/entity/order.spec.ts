@@ -21,8 +21,8 @@ describe('Order unit tests', () => {
   });
 
   it('should calculate total', () => {
-    const item = new OrderItem('i1', 'Item 1', 100, 2);
-    const item2 = new OrderItem('i2', 'Item 2', 200, 2);
+    const item = new OrderItem('i1', 'Item 1', 'p1', 100, 2);
+    const item2 = new OrderItem('i2', 'Item 2', 'p2', 200, 2);
     const order = new Order('o1', 'c1', [item, item2]);
     expect(order.total()).toBe(600);
   });

@@ -1,11 +1,13 @@
 export default class OrderItem {
   private _id: string;
+  private _productId: string;
   private _name: string;
   private _price: number;
   private _quantity: number;
 
-  constructor(id: string, name: string, price: number, quantity: number) {
+  constructor(id: string, name: string, productId: string, price: number, quantity: number) {
     this._id = id;
+    this._productId = productId;
     this._name = name;
     this._price = price;
     this._quantity = quantity;
@@ -18,6 +20,9 @@ export default class OrderItem {
     }
     if (this._name.length === 0) {
       throw new Error('Name is required');
+    }
+    if (this._productId.length === 0) {
+      throw new Error('ProductId is required');
     }
     if (this._price <= 0) {
       throw new Error('Price must be greater than zero');
