@@ -6,8 +6,8 @@
   "description": "",
   "main": "./dist/test.js",
   "scripts": {
-    "test": "jest",
-    "tsc": "tsc --noEmit",
+    "test": "tsc --noEmit && jest",
+    "tsc": "tsc",
     "start": "node dist/test.js",
     "build": "tsc"
   },
