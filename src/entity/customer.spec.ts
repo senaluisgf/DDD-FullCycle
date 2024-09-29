@@ -49,4 +49,22 @@ describe("Customer unit tests", () => {
 
     expect(customer.isActive()).toBe(false);
   })
+  
+  it("Should throw error when reward points is negative", () => {
+    expect(() => {
+      let customer = new Customer('c1', 'Luis Sena');
+      customer.addRewardPoints(-100);
+    }).toThrow("Reward points cannot be negative");
+  })
+
+  it("Should add reward points", () => {
+    const customer = new Customer('c1', 'Luis Sena');
+    expect(customer.rewardPoints).toBe(0);
+
+    customer.addRewardPoints(100);
+    expect(customer.rewardPoints).toBe(100);
+
+    customer.addRewardPoints(100);
+    expect(customer.rewardPoints).toBe(200);
+  })
 });
