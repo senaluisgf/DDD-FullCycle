@@ -42,7 +42,7 @@ export default class Customer {
   isActive(): boolean {
     return this._active;
   }
-  set address(address: Address) {
+  changeAddress(address: Address) {
     this._address = address;
   }
   addRewardPoints(points: number) {
@@ -58,5 +58,8 @@ export default class Customer {
   }
   get rewardPoints(): number {
     return this._rewardPoints;
+  }
+  get address(): Address {
+    return this._address;
   }
 }

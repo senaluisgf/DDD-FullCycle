@@ -32,7 +32,7 @@ describe("Customer unit tests", () => {
   it("Should activate customer", () => {
     const customer = new Customer('c1', 'Luis Sena');
     const address = new Address('rua 1', 1, "cidade 1", "pais 1", '1')
-    customer.address = address;
+    customer.changeAddress(address);
 
     customer.activate();
 
@@ -42,7 +42,7 @@ describe("Customer unit tests", () => {
   it("Should deactivate customer", () => {
     const customer = new Customer('c1', 'Luis Sena');
     const address = new Address('rua 1', 1, "cidade 1", "pais 1", '1')
-    customer.address = address;
+    customer.changeAddress(address);
     customer.activate();
 
     customer.deactivate();
