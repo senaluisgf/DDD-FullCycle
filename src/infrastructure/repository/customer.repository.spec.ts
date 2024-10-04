@@ -103,7 +103,7 @@ describe("Customer Repository unit tests", () => {
     const sut = new CustomerRepository();
 
     expect(async () => {
-      await sut.find('123');
+      await sut.find('-1');
     }).rejects.toThrow('Customer not found')
   });
 

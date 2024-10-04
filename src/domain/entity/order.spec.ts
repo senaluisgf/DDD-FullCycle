@@ -26,4 +26,12 @@ describe('Order unit tests', () => {
     const order = new Order('o1', 'c1', [item, item2]);
     expect(order.total()).toBe(600);
   });
+
+  it('should throw error remove items ', () => {
+    expect(() => {
+      const item = new OrderItem('i1', 'Item 1', 'p1', 100, 1);
+      const order = new Order('o1', 'c1', [item]);
+      order.changeItems([]);
+    }).toThrow('Items are required');
+  });
 });

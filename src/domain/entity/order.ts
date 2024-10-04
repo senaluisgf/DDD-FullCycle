@@ -27,6 +27,11 @@ export default class Order {
     return this._items.reduce((acc, item) => acc + item.orderItemTotal(), 0);
   }
 
+  changeItems(items: OrderItem[]) {
+    this._items = items;
+    this.validate();
+  }
+
   get id(): string {
     return this._id;
   }
